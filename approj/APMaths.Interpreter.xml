@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+<assembly><name>APMaths.Interpreter</name></assembly>
+<members>
+<member name="M:APMaths.Interpreter.Parser.parsePrimary(APMaths.Interpreter.Parser.ParserState)">
+<summary>
+ parses a primary expression, which can be a number or a parenthesised expression.
+</summary>
+</member>
+</members>
+</doc>
