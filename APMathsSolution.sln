@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36401.2 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APMaths.WpfApp", "APMS.WpfApp\APMaths.WpfApp.csproj", "{C53E80D4-9E33-47B9-B4DE-33F78E56F000}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "APMaths.Interpreter", "APMS.Interpreter\APMaths.Interpreter.fsproj", "{58D8B565-170D-4E6C-ACEB-8CBA6CE62D5B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C53E80D4-9E33-47B9-B4DE-33F78E56F000}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C53E80D4-9E33-47B9-B4DE-33F78E56F000}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C53E80D4-9E33-47B9-B4DE-33F78E56F000}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C53E80D4-9E33-47B9-B4DE-33F78E56F000}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58D8B565-170D-4E6C-ACEB-8CBA6CE62D5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58D8B565-170D-4E6C-ACEB-8CBA6CE62D5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58D8B565-170D-4E6C-ACEB-8CBA6CE62D5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58D8B565-170D-4E6C-ACEB-8CBA6CE62D5B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {310A8A4B-826E-4682-938D-87BAB39DA346}
+	EndGlobalSection
+EndGlobal

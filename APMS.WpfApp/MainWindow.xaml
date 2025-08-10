@@ -1,0 +1,72 @@
+<Window x:Class="APMaths.WpfApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="AP Interpreter n Plotter"
+        Height="600" Width="980" MinHeight="500" MinWidth="860">
+
+    <DockPanel>
+        
+        
+        <!-- menu at the top -->
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="Help">
+                <MenuItem Header="Show Help Pane" IsCheckable="True" IsChecked="True" Click="HelpToggleMenuItem_OnClick" />
+            </MenuItem>
+        </Menu>
+
+        <!-- main layout -->
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- interpreter -->
+            <StackPanel Grid.Row="0" Grid.Column="0" Orientation="Horizontal" Margin="8">
+                <TextBox x:Name="InputExpr" Width="300" Margin="0,0,8,0" />
+                <Button x:Name="BtnEval" Content="Evaluate" Width="100" Margin="0,0,8,0" Click="BtnEval_Click" />
+                <TextBlock Text="Result:" VerticalAlignment="Center" Margin="0,0,4,0"/>
+                <TextBox x:Name="OutputResult" IsReadOnly="True" Width="150" Margin="0,0,8,0"/>
+                <TextBlock x:Name="StatusText" VerticalAlignment="Center"/>
+            </StackPanel>
+
+            <!-- the plot controls (slope/intercept + buttons) -->
+            <StackPanel Grid.Row="1" Grid.Column="0" Orientation="Horizontal" Margin="8" VerticalAlignment="Center">
+                <TextBlock Text="Slope (m):" VerticalAlignment="Center" Margin="0,0,6,0"/>
+                <TextBox x:Name="SlopeInput" Width="80" Margin="0,0,12,0" Text="1"/>
+
+                <TextBlock Text="Intercept (b):" VerticalAlignment="Center" Margin="0,0,6,0"/>
+                <TextBox x:Name="InterceptInput" Width="80" Margin="0,0,12,0" Text="0"/>
+
+                <Button x:Name="BtnDraw" Content="Draw" Width="90" Margin="0,0,8,0" Click="BtnDraw_OnClick"/>
+                <Button x:Name="BtnClear" Content="Clear" Width="90" Click="BtnClear_OnClick"/>
+
+                <!-- keeps line without clearing others -->
+                <Button x:Name="BtnDrawLine" Content="Add Line" Width="100" Margin="8,0,0,0" Click="BtnDrawLine_Click"/>
+            </StackPanel>
+
+            <!-- plotting moved to its own row so it wont overlap w controls -->
+            <Canvas x:Name="PlotCanvas" Grid.Row="2" Grid.Column="0" Background="White" Margin="8" />
+
+            <!-- help pane -->
+            <ScrollViewer x:Name="HelpPane" Grid.Row="0" Grid.RowSpan="3" Grid.Column="1" Margin="8">
+                <TextBlock TextWrapping="Wrap">
+                    <Run Text="Valid tokens:"/><LineBreak/>
+                    <Run Text="• Integers and floats (dot for decimals)"/><LineBreak/>
+                    <Run Text="• Operators: +  -  *  /  %  ^  (  )"/><LineBreak/>
+                    <LineBreak/>
+                    <Run Text="Examples:"/><LineBreak/>
+                    <Run Text="2 + 3 * 4 → 14"/><LineBreak/>
+                    <Run Text="-(1 + 2.5) / 2 → -1.75"/>
+                </TextBlock>
+            </ScrollViewer>
+            
+            
+        </Grid>
+    </DockPanel>
+</Window>
